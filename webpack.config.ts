@@ -1,5 +1,6 @@
 import { Configuration } from "webpack";
 import * as path from "path";
+import * as VueLoaderPlugin from "vue-loader/lib/plugin";
 
 const config: Configuration = {
   entry: [ "./src/scripts/index.ts" ],
@@ -11,7 +12,7 @@ const config: Configuration = {
     alias: {
       vue$: "vue/dist/vue.esm.js",
     },
-    extensions: [".ts", ".tsx", ".js", ".json"],
+    extensions: [".ts", ".tsx", ".js", ".json", ".vue"],
   },
   mode: "development",
   module: {
@@ -19,9 +20,17 @@ const config: Configuration = {
       {
         test: /\.tsx?$/,
         loader: "ts-loader",
+        options: {
+          appendTsSuffixTo: [/\.vue$/]
+        },
+      },
+      {
+        test: /.vue$/,
+        loader: "vue-loader",
       },
     ],
   },
+  plugins: [ new VueLoaderPlugin() ],
 };
 
 export default config;
