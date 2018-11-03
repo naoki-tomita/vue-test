@@ -18,3 +18,13 @@ export default class Body extends Vue {
   }
 }
 </script>
+
+<style scoped>
+button {
+  color: white;
+  background-color: black;
+}
+div {
+  background-color: aquamarine;
+}
+</style>

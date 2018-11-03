@@ -12,3 +12,9 @@ export default class Title extends Vue {
   @Prop(String) title: string;
 }
 </script>
+
+<style scoped>
+h1 {
+  font-size: 42px;
+}
+</style>
