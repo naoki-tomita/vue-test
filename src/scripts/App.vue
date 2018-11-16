@@ -7,11 +7,12 @@
 </template>
 
 <script lang="ts">
+import { Vue, Component } from "vue-property-decorator";
+
 import TitleEl from "./Title.vue";
 import BodyEl from "./Body.vue";
 import FooterEl from "./Footer.vue";
 
-import { Vue, Component } from "vue-property-decorator";
 
 @Component({
   components: {

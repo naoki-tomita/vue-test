@@ -1,20 +1,24 @@
 <template>
   <div>
     <div>{{ foo }}</div>
-    <div>{{ bar }}</div>
+    <div>{{ count }}</div>
     <button v-on:click="handleClick">Add</button>
   </div>
 </template>
 
 <script lang="ts">
 import { Vue, Prop, Component } from "vue-property-decorator";
+import { Getter, Action } from "vuex-class";
 
 @Component
 export default class Body extends Vue {
   foo: string = "foo";
-  bar: number = 0;
+
+  @Getter("count") count: number;
+  @Action("countUp") countUp: () => void;
+
   handleClick() {
-    this.bar++;
+    this.countUp();
   }
 }
 </script>
