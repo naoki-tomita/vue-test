@@ -14,6 +14,7 @@
     "start": "run-p watch serve"
   },
   "dependencies": {
+    "@skyrpex/vue-jsx-loader": "^0.0.1-1",
     "@types/vue": "^2.0.0",
     "@types/webpack": "^4.4.17",
     "chokidar": "^2.0.4",
@@ -23,7 +24,7 @@
     "npm-run-all": "^4.1.3",
     "ts-loader": "^5.3.0",
     "ts-node": "^7.0.1",
-    "typescript": "^3.1.5",
+    "typescript": "^3.2.0-rc",
     "vue": "^2.5.17",
     "vue-loader": "^15.4.2",
     "vue-property-decorator": "^7.2.0",
